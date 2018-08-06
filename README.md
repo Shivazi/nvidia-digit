@@ -5,6 +5,7 @@ https://github.com/NVIDIA/DIGITS/blob/master/docs/BuildDigits.md
 
 # Building Caffe
 https://www.youtube.com/watch?v=APobbN4CCMw
+
 Install some dependencies with Deb packages:
 ```
 sudo apt-get install libatlas-base-dev libatlas-dev
@@ -26,6 +27,10 @@ cmake -DCMAKE_BUILD_TYPE=Release -DBUILD_SHARED_LIBS=ON -DCMAKE_INSTALL_PREFIX:P
 
 ```
 # DIGIT
+
+visit https://github.com/NVIDIA/DIGITS/
+
+Dependencies
 ```
 sudo apt-get install --no-install-recommends git graphviz python-dev python-flask python-flaskext.wtf python-gevent python-h5py python-numpy python-pil python-pip python-scipy python-tk
 ```
