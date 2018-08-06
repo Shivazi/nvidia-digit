@@ -3,6 +3,8 @@ https://github.com/NVIDIA/DIGITS
 
 https://github.com/NVIDIA/DIGITS/blob/master/docs/BuildDigits.md
 
+http://ros-developer.com/2018/05/12/installing-nvidia-digist-ubuntu-16-04/
+
 # Building Caffe
 https://www.youtube.com/watch?v=APobbN4CCMw
 
