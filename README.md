@@ -24,3 +24,14 @@ http://ros-developer.com/2018/05/12/installing-nvidia-digist-ubuntu-16-04/
 # Building Caffe
 https://www.youtube.com/watch?v=APobbN4CCMw
 
+
+# model extract to /jetson-inference/data/networks/GoogleNet-ILSVRC12-subset
+```
+$ NET=networks/GoogleNet-ILSVRC12-subset
+$ ./imagenet-console cat.jpeg cat_output_1.jpg \
+--prototxt=$NET/deploy.prototxt \
+--model=$NET/snapshot_iter_180.caffemodel \
+--labels=$NET/labels.txt \
+--input_blob=data \
+--output_blob=softmax
+```
