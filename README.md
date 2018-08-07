@@ -3,6 +3,11 @@ https://github.com/NVIDIA/DIGITS
 
 https://github.com/NVIDIA/DIGITS/blob/master/docs/BuildDigits.md
 
+all export file must be set enver and install using sudo for permission
+
+sudo vim ~/.bashrc
+Then execute the command below to make the change take effect:
+source ~/.bashrc
 http://ros-developer.com/2018/05/12/installing-nvidia-digist-ubuntu-16-04/
 
 # Building Caffe
