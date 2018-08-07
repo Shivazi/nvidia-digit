@@ -1,4 +1,7 @@
 # nvidia-digit
+
+https://github.com/dusty-nv/jetson-inference#locating-object-coordinates-using-detectnet
+
 https://github.com/NVIDIA/DIGITS
 
 https://github.com/NVIDIA/DIGITS/blob/digits-6.0/docs/BuildProtobuf.md
