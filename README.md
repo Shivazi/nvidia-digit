@@ -25,7 +25,8 @@ http://ros-developer.com/2018/05/12/installing-nvidia-digist-ubuntu-16-04/
 https://www.youtube.com/watch?v=APobbN4CCMw
 
 
-# model extract to /jetson-inference/data/networks/GoogleNet-ILSVRC12-subset
+# Custom Model Execution
+model extract to /jetson-inference/data/networks/GoogleNet-ILSVRC12-subset
 ```
 $ NET=networks/GoogleNet-ILSVRC12-subset
 $ ./imagenet-console cat.jpeg cat_output_1.jpg \
