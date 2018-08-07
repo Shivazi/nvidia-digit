@@ -13,6 +13,9 @@ sudo vim ~/.bashrc
 Then execute the command below to make the change take effect:
 source ~/.bashrc
 ```
+# Test Digit
+https://www.youtube.com/watch?v=rNB-cp5fSTw
+
 http://ros-developer.com/2018/05/12/installing-nvidia-digist-ubuntu-16-04/
 
 # Building Caffe
