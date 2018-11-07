@@ -45,4 +45,40 @@ cd python
 sudo python3 setup.py install --cpp_implementation
 ```
 This will ensure that Protobuf 3 is installed.
+# Building Caffe
+Install some dependencies with Deb packages:
+```
+sudo apt-get install --no-install-recommends build-essential cmake git gfortran libatlas-base-dev libboost-filesystem-dev libboost-python-dev libboost-system-dev libboost-thread-dev libgflags-dev libgoogle-glog-dev libhdf5-serial-dev libleveldb-dev liblmdb-dev libopencv-dev libsnappy-dev python3-all-dev python3-dev python3-h5py python3-matplotlib python3-numpy  python3-pil python3-pip python3-pydot python3-scipy python3-skimage python3-sklearn
+sudo apt-get install libboost-all-dev
+sudo apt-get install libboost-all-dev
+```
 
+Download source
+
+DIGITS is currently compatiable with Caffe 0.15
+
+# example location - can be customized
+export CAFFE_ROOT=~/caffe
+git clone https://github.com/NVIDIA/caffe.git $CAFFE_ROOT -b 'caffe-0.15'
+
+Setting the CAFFE_ROOT environment variable will help DIGITS automatically detect your Caffe installation, but this is optional.
+Python packages
+
+Several PyPI packages need to be installed:
+
+sudo pip install -r $CAFFE_ROOT/python/requirements.txt
+
+If you hit some errors about missing imports, then use this command to install the packages in order (see discussion here):
+
+cat $CAFFE_ROOT/python/requirements.txt | xargs -n1 sudo pip install
+
+Build
+
+We recommend using CMake to configure Caffe rather than the raw Makefile build for automatic dependency detection:
+
+cd $CAFFE_ROOT
+mkdir build
+cd build
+cmake ..
+sudo make -j"$(nproc)"
+sudo make install
