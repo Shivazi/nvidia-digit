@@ -82,3 +82,51 @@ cd build
 cmake ..
 sudo make -j"$(nproc)"
 sudo make install
+
+
+Download source
+
+# example location - can be customized
+DIGITS_ROOT=~/digits
+git clone https://github.com/NVIDIA/DIGITS.git $DIGITS_ROOT
+
+Throughout the docs, we'll refer to your install location as DIGITS_ROOT (~/digits in this case), though you don't need to actually set that environment variable.
+Python packages
+
+Several PyPI packages need to be installed:
+
+sudo pip install -r $DIGITS_ROOT/requirements.txt
+
+[Optional] Enable support for plug-ins
+
+DIGITS needs to be installed to enable loading data and visualization plug-ins:
+
+sudo pip install -e $DIGITS_ROOT
+
+Starting the server
+
+./digits-devserver
+
+Starts a server at http://localhost:5000/.
+
+$ ./digits-devserver --help
+usage: __main__.py [-h] [-p PORT] [-d] [--version]
+
+DIGITS development server
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -p PORT, --port PORT  Port to run app on (default 5000)
+  -d, --debug           Run the application in debug mode (reloads when the
+                        source changes and gives more detailed error messages)
+  --version             Print the version number and exit
+
+Getting started
+
+Now that you're up and running, check out the Getting Started Guide.
+Development
+
+If you are interested in developing for DIGITS or work with its source code, check out the Development Setup Guide
+Troubleshooting
+
+Most configuration options should have appropriate defaults. Read this doc for information about how to set a custom configuration for your server.
