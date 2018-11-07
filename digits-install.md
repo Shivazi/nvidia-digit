@@ -58,58 +58,61 @@ Download source
 DIGITS is currently compatiable with Caffe 0.15
 
 # example location - can be customized
+```
 export CAFFE_ROOT=~/caffe
 git clone https://github.com/NVIDIA/caffe.git $CAFFE_ROOT -b 'caffe-0.15'
-
+```
 Setting the CAFFE_ROOT environment variable will help DIGITS automatically detect your Caffe installation, but this is optional.
 Python packages
 
 Several PyPI packages need to be installed:
-
-sudo pip install -r $CAFFE_ROOT/python/requirements.txt
-
+```
+sudo pip3 install -r $CAFFE_ROOT/python/requirements.txt
+```
 If you hit some errors about missing imports, then use this command to install the packages in order (see discussion here):
-
+```
 cat $CAFFE_ROOT/python/requirements.txt | xargs -n1 sudo pip install
-
+```
 Build
 
 We recommend using CMake to configure Caffe rather than the raw Makefile build for automatic dependency detection:
-
+```
 cd $CAFFE_ROOT
 mkdir build
 cd build
 cmake ..
 sudo make -j"$(nproc)"
 sudo make install
-
+```
 
 Download source
 
 # example location - can be customized
+```
 DIGITS_ROOT=~/digits
 git clone https://github.com/NVIDIA/DIGITS.git $DIGITS_ROOT
-
+```
 Throughout the docs, we'll refer to your install location as DIGITS_ROOT (~/digits in this case), though you don't need to actually set that environment variable.
 Python packages
 
 Several PyPI packages need to be installed:
-
-sudo pip install -r $DIGITS_ROOT/requirements.txt
-
+```
+sudo pip3 install -r $DIGITS_ROOT/requirements.txt
+```
 [Optional] Enable support for plug-ins
 
 DIGITS needs to be installed to enable loading data and visualization plug-ins:
-
-sudo pip install -e $DIGITS_ROOT
-
+```
+sudo pip3 install -e $DIGITS_ROOT
+```
 Starting the server
-
+```
 ./digits-devserver
-
+```
 Starts a server at http://localhost:5000/.
-
+```
 $ ./digits-devserver --help
+```
 usage: __main__.py [-h] [-p PORT] [-d] [--version]
 
 DIGITS development server
