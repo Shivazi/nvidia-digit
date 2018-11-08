@@ -46,6 +46,7 @@ sudo python3 setup.py install --cpp_implementation
 ```
 This will ensure that Protobuf 3 is installed.
 # Building Caffe
+
 Install some dependencies with Deb packages:
 ```
 sudo apt-get install --no-install-recommends build-essential cmake git gfortran libatlas-base-dev libboost-filesystem-dev libboost-python-dev libboost-system-dev libboost-thread-dev libgflags-dev libgoogle-glog-dev libhdf5-serial-dev libleveldb-dev liblmdb-dev libopencv-dev libsnappy-dev python3-all-dev python3-dev python3-h5py python3-matplotlib python3-numpy  python3-pil python3-pip python3-pydot python3-scipy python3-skimage python3-sklearn
@@ -98,13 +99,26 @@ Python packages
 Several PyPI packages need to be installed:
 ```
 sudo pip3 install -r $DIGITS_ROOT/requirements.txt
+
+sudo apt-get install python3-lmdb
+sudo apt-get install python3-psutil
 ```
+
 [Optional] Enable support for plug-ins
 
 DIGITS needs to be installed to enable loading data and visualization plug-ins:
 ```
 sudo pip3 install -e $DIGITS_ROOT
 ```
+If 
+```
+sudo pip3 install -r $DIGITS_ROOT/requirements.txt 
+```
+Faild then
+```
+sudo pip3 install -e $DIGITS_ROOT
+```
+
 Starting the server
 ```
 ./digits-devserver
