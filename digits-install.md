@@ -102,6 +102,7 @@ sudo pip3 install -r $DIGITS_ROOT/requirements.txt
 
 sudo apt-get install python3-lmdb
 sudo apt-get install python3-psutil
+sudo pip3 install requests
 ```
 
 [Optional] Enable support for plug-ins
@@ -121,6 +122,7 @@ sudo pip3 install -e $DIGITS_ROOT
 
 Starting the server
 ```
+cd digits
 ./digits-devserver
 ```
 Starts a server at http://localhost:5000/.
