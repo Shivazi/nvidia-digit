@@ -37,3 +37,5 @@ $ ./imagenet-console cat.jpeg cat_output_1.jpg \
 --input_blob=data \
 --output_blob=softmax
 ```
+# Object Detection
+https://github.com/NVIDIA/DIGITS/blob/master/examples/object-detection/README.md
