@@ -1,4 +1,5 @@
 # nvidia-digit
+https://github.com/NVIDIA/DIGITS/tree/master/examples/object-detection
 
 https://github.com/dusty-nv/jetson-inference#locating-object-coordinates-using-detectnet
 
